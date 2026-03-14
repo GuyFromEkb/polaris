@@ -10,7 +10,10 @@ export const getProjects = query({
       return []
     }
 
-    return await ctx.db.query("projects").collect()
+    return await ctx.db
+      .query("projects")
+      .withIndex("by_owner", (q) => q.eq("ownerId", identity.subject))
+      .collect()
   },
 })
 
