@@ -27,7 +27,7 @@ export default function DemoPage() {
         "Content-Type": "application/json",
       },
       method: "POST",
-      body: JSON.stringify({ message: "как сделать рецепт лазании" }),
+      body: JSON.stringify({ message: "как называется файл для middleware в next.js перейди по ссылке https://nextjs.org/docs/app/api-reference/file-conventions/proxy и прочитай" }),
     })
     setLoading2(false)
   }
