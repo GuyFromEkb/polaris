@@ -32,6 +32,7 @@ export const createProject = mutation({
     const newProjectId = await ctx.db.insert("projects", {
       name: newProjectName,
       ownerId: identity.subject,
+      updatedAt: +new Date(),
     })
 
     return newProjectId
